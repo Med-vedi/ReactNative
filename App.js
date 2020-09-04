@@ -6,10 +6,7 @@ import {
 import React from "react";
 import {
   StyleSheet,
-  Dimensions,
-  Text,
   View,
-  SafeAreaView,
   Platform,
   StatusBar as StatusBarReact,
 } from "react-native";
@@ -18,22 +15,18 @@ export default function App() {
   const { landscape } = useDeviceOrientation();
   const handlePress = () => console.log("On btn press");
   return (
-    <SafeAreaView style={styles.container}>
-      <View
-        style={{
-          backgroundColor: "dodgerblue",
-          width: "100%",
-          height: landscape ? "100%" : "30%",
-        }}
-      ></View>
-    </SafeAreaView>
+    <View style={{ backgroundColor: "white", flex: 1 }}>
+      <View style={{ backgroundColor: "dodgerblue", flex: 1 }} />
+      <View style={{ backgroundColor: "gold", flex: 1 }} />
+      <View style={{ backgroundColor: "pink", flex: 1 }} />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#000",
     paddingTop: Platform.OS === "android" ? StatusBarReact.currentHeight : 0,
   },
 });
