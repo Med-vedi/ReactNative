@@ -10,6 +10,8 @@ import {
   TouchableOpacity,
   Button,
   Alert,
+  Platform,
+  StatusBar as StatusBarReact,
 } from "react-native";
 
 export default function App() {
@@ -18,8 +20,9 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Button
-        color="orange"
-        borderColor="black"
+        style={styles.btn}
+        // color="orange"
+        // borderColor="black"
         title="Click me"
         onPress={() =>
           // Alert.alert("Hey", "Button tapped", [{ text: "Yes" }, { text: "No" }])
@@ -34,11 +37,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: Platform.OS === "android" ? StatusBarReact.currentHeight : 0,
+
+    // paddingTop: Platform.OS === "android" ? 20 : 0,
+    // alignItems: "center",
+    // justifyContent: "center",
   },
-  button: {
-    borderColor: "orange",
+  btn: {
+    backgroundColor: "#000",
     color: "#000",
   },
 });
