@@ -8,29 +8,24 @@ import {
   Image,
   TouchableWithoutFeedback,
   TouchableOpacity,
+  Button,
+  Alert,
 } from "react-native";
 
 export default function App() {
   // console.log(require("./assets/icon.png"));
-  const handlePress = () => console.log("On text press");
+  const handlePress = () => console.log("On btn press");
   return (
     <SafeAreaView style={styles.container}>
-      <Text onPress={handlePress}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis iusto
-        eaque beatae illo autem facilis, debitis repudiandae quaerat tempore
-        fugit dignissimos facere quo sequi expedita! Ab quas eveniet accusantium
-      </Text>
-      <TouchableOpacity onPress={() => console.log("img tapped")}>
-        <Image
-          source={{
-            width: 200,
-            height: 300,
-            uri: "https://picsum.photos/id/237/200/300",
-          }}
-        />
-      </TouchableOpacity>
-
-      <StatusBar style="auto" />
+      <Button
+        color="orange"
+        borderColor="black"
+        title="Click me"
+        onPress={() =>
+          // Alert.alert("Hey", "Button tapped", [{ text: "Yes" }, { text: "No" }])
+          Alert.prompt("Hey", "Give me your data", (text) => console.log(text))
+        }
+      />
     </SafeAreaView>
   );
 }
@@ -41,5 +36,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  button: {
+    borderColor: "orange",
+    color: "#000",
   },
 });
