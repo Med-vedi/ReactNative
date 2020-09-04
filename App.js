@@ -15,10 +15,28 @@ export default function App() {
   const { landscape } = useDeviceOrientation();
   const handlePress = () => console.log("On btn press");
   return (
-    <View style={{ backgroundColor: "white", flex: 1 }}>
-      <View style={{ backgroundColor: "dodgerblue", flex: 1 }} />
-      <View style={{ backgroundColor: "gold", flex: 1 }} />
-      <View style={{ backgroundColor: "pink", flex: 1 }} />
+    <View
+      style={{
+        backgroundColor: "white",
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        justifyItems: "center",
+      }}
+    >
+      <View
+        style={{
+          backgroundColor: "dodgerblue",
+          height: 100,
+          width: 400,
+          flexShrink: 1,
+          // flexBasis: 100,
+          // flexGrow: 1,
+        }}
+      />
+      <View style={{ backgroundColor: "gold", width: 100, height: 100 }} />
+      <View style={{ backgroundColor: "pink", width: 100, height: 100 }} />
     </View>
   );
 }
