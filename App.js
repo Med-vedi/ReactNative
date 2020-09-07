@@ -12,13 +12,15 @@ import AppButton from "./app/components/AppButton";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ListingDetailScreen from "./app/screens/ListingDetailScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
 
 export default function App() {
   const { landscape } = useDeviceOrientation();
   const handlePress = () => console.log("On btn press");
   return (
     // <ListingDetailScreen />
-    <ViewImageScreen />
+    // <ViewImageScreen />
+    <MessagesScreen />
 
     // <WelcomeScreen />
   );
