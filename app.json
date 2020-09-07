@@ -4,9 +4,7 @@
     "slug": "Instinct",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/icon.png",
     "splash": {
-      "image": "./app/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,8 +15,6 @@
     "ios": {
       "supportsTablet": true
     },
-    "web": {
-      "favicon": "./app/assets/favicon.png"
-    }
+    "web": {}
   }
 }
