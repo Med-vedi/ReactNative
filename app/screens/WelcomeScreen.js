@@ -5,10 +5,10 @@ export default function WelcomeScreen() {
   return (
     <ImageBackground
       style={styles.background}
-      source={require("../assets/code5.png")}
+      source={require("../assets/back.jpg")}
     >
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("../assets/favicon.png")} />
+        <Image style={styles.logo} source={require("../assets/pngwave.png")} />
         <Text>What the hell)))</Text>
       </View>
 
