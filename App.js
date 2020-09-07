@@ -11,12 +11,14 @@ import Card from "./app/components/Card";
 import AppButton from "./app/components/AppButton";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ListingDetailScreen from "./app/screens/ListingDetailScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
   const { landscape } = useDeviceOrientation();
   const handlePress = () => console.log("On btn press");
   return (
-    <ListingDetailScreen />
+    // <ListingDetailScreen />
+    <ViewImageScreen />
 
     // <WelcomeScreen />
   );
