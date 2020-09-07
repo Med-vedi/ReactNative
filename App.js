@@ -17,11 +17,7 @@ export default function App() {
   const handlePress = () => console.log("On btn press");
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <AppText>
-        I love React Native! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Animi vitae molestias minus assumenda ab nobis saepe cum
-        excepturi.
-      </AppText>
+      <AppText>I love React Native!</AppText>
       <MaterialCommunityIcons name="email" size={100} color="dodgerblue" />
     </View>
   );
