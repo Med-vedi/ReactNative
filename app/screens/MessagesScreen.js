@@ -48,7 +48,7 @@ export default function MessagesScreen() {
             onPress={() => console.log("msg selected")}
             // renderRightActions={ListItemDeleteAction}
             renderRightActions={() => (
-              <ListItemDeleteAction onPress={() => console.log("delete")} />
+              <ListItemDeleteAction onPress={() => handleDelete(item)} />
             )}
           />
         )}
