@@ -1,39 +1,28 @@
-// import { StatusBar } from "expo-status-bar";
-import {
-  useDimensions,
-  useDeviceOrientation,
-} from "@react-native-community/hooks";
+import { useDeviceOrientation } from "@react-native-community/hooks";
 import React from "react";
 import {
   StyleSheet,
   View,
-  Text,
   Platform,
   StatusBar as StatusBarReact,
 } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 import WelcomeScreen from "./app/screens/WelcomeScreen";
+
+import AppText from "./app/components/AppText";
 
 export default function App() {
   const { landscape } = useDeviceOrientation();
   const handlePress = () => console.log("On btn press");
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text
-        style={{
-          // fontFamily: "Courier",
-          fontSize: 30,
-          fontStyle: "italic",
-          fontWeight: "600",
-          color: "tomato",
-          textTransform: "capitalize",
-          textAlign: "center",
-          lineHeight: 40,
-        }}
-      >
+      <AppText>
         I love React Native! Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Animi vitae molestias minus assumenda ab nobis saepe cum
         excepturi.
-      </Text>
+      </AppText>
+      <MaterialCommunityIcons name="email" size={100} color="dodgerblue" />
     </View>
   );
 }
