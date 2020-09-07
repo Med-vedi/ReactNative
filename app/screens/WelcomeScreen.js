@@ -8,12 +8,13 @@ import AppButton from "../components/AppButton";
 export default function WelcomeScreen() {
   return (
     <ImageBackground
+      blurRadius={10}
       style={styles.background}
       source={require("../assets/back.jpg")}
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/pngwave.png")} />
-        <Text>Sell with discount</Text>
+        <Text style={styles.tagline}>Sell with discount</Text>
       </View>
       <View style={styles.buttonContainer}>
         <AppButton title="Login" color="primary" />
@@ -42,5 +43,10 @@ const styles = StyleSheet.create({
     top: 50,
     position: "absolute",
     color: "white",
+  },
+  tagline: {
+    fontSize: 25,
+    fontWeight: "600",
+    paddingVertical: 20,
   },
 });
