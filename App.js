@@ -7,6 +7,7 @@ import React from "react";
 import {
   StyleSheet,
   View,
+  Text,
   Platform,
   StatusBar as StatusBarReact,
 } from "react-native";
@@ -17,32 +18,22 @@ export default function App() {
   const handlePress = () => console.log("On btn press");
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <View
+      <Text
         style={{
-          backgroundColor: "dodgerblue",
-          width: 100,
-          height: 100,
-          shadowColor: "grey",
-          shadowOffset: { width: 0, height: 10 },
-          shadowOpacity: 1,
-          shadowRadius: 10,
-          //----android
-          elevation: 20,
-          //----
-          padding: 20,
-          paddingLeft: 30,
+          // fontFamily: "Courier",
+          fontSize: 30,
+          fontStyle: "italic",
+          fontWeight: "600",
+          color: "tomato",
+          textTransform: "capitalize",
+          textAlign: "center",
+          lineHeight: 40,
         }}
       >
-        <View style={{ backgroundColor: "gold", width: 50, height: 50 }}></View>
-      </View>
-      <View
-        style={{
-          backgroundColor: "tomato",
-          width: 100,
-          height: 100,
-          margin: 20,
-        }}
-      ></View>
+        I love React Native! Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Animi vitae molestias minus assumenda ab nobis saepe cum
+        excepturi.
+      </Text>
     </View>
   );
 }
