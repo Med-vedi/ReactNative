@@ -22,14 +22,17 @@ export default function App() {
           backgroundColor: "dodgerblue",
           width: 100,
           height: 100,
-          borderWidth: 10,
-          borderRadius: 50,
-          borderColor: "royalblue",
-
-          // borderTopWidth: 20,
-          // borderTopLeftRadius: 50,
+          shadowColor: "grey",
+          shadowOffset: { width: 0, height: 10 },
+          shadowOpacity: 1,
+          shadowRadius: 10,
+          //----android
+          elevation: 20,
+          //----
         }}
-      ></View>
+      >
+        <View style={{ backgroundColor: "gold", width: 50, height: 50 }}></View>
+      </View>
     </View>
   );
 }
