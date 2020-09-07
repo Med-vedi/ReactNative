@@ -5,7 +5,10 @@ import colors from "../config/colors";
 
 export default function AppButton({ title, onPress, color }) {
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress}>
+    <TouchableOpacity
+      style={[styles.button, { backgroundColor: colors[color] }]}
+      onPress={onPress}
+    >
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
@@ -13,7 +16,7 @@ export default function AppButton({ title, onPress, color }) {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: colors.color,
+    backgroundColor: colors.primary,
     borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",
