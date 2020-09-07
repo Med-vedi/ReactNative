@@ -17,8 +17,16 @@ export default function WelcomeScreen() {
         <Text style={styles.tagline}>Sell with discount</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <AppButton title="Login" color="primary" />
-        <AppButton title="Register" color="secondary" />
+        <AppButton
+          title="Login"
+          color="primary"
+          onPress={() => console.log("tap")}
+        />
+        <AppButton
+          title="Register"
+          color="secondary"
+          onPress={() => console.log("tap")}
+        />
       </View>
     </ImageBackground>
   );
