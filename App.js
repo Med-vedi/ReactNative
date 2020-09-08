@@ -13,16 +13,16 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ListingDetailScreen from "./app/screens/ListingDetailScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
+import Screen from "./app/components/Screen";
+import Icon from "./app/components/Icon";
 
 export default function App() {
   const { landscape } = useDeviceOrientation();
   const handlePress = () => console.log("On btn press");
   return (
-    // <ListingDetailScreen />
-    // <ViewImageScreen />
-    <MessagesScreen />
-
-    // <WelcomeScreen />
+    <Screen>
+      <Icon name="email" size={100} />
+    </Screen>
   );
 }
 
