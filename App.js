@@ -22,7 +22,11 @@ export default function App() {
   const handlePress = () => console.log("On btn press");
   return (
     <Screen>
-      <ListItem title="My title" subTitle="My subtitle" />
+      <ListItem
+        title="My title"
+        // subTitle="My subtitle"
+        ImageComponent={<Icon name="email" />}
+      />
     </Screen>
   );
 }
