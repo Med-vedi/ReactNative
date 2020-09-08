@@ -16,19 +16,12 @@ import MessagesScreen from "./app/screens/MessagesScreen";
 import Screen from "./app/components/Screen";
 import Icon from "./app/components/Icon";
 import ListItem from "./app/components/ListItem";
+import AccountScreen from "./app/screens/AccountScreen";
 
 export default function App() {
   const { landscape } = useDeviceOrientation();
   const handlePress = () => console.log("On btn press");
-  return (
-    <Screen>
-      <ListItem
-        title="My title"
-        // subTitle="My subtitle"
-        ImageComponent={<Icon name="email" />}
-      />
-    </Screen>
-  );
+  return <AccountScreen />;
 }
 
 const styles = StyleSheet.create({
