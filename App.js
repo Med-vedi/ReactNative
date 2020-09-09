@@ -6,18 +6,17 @@ import {
   Platform,
   StatusBar as StatusBarReact,
   TextInput,
+  Switch,
 } from "react-native";
 
 import Screen from "./app/components/Screen";
 import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
-  const handlePress = () => console.log("On btn press");
-  const [firstName, setFirstName] = useState("");
-  console.log(firstName);
+  const [isNew, setIsNew] = useState(false);
   return (
     <Screen>
-      <AppTextInput placeholder="Username" icon="email" />
+      <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} />
     </Screen>
   );
 }
