@@ -6,19 +6,12 @@ import {
   Platform,
   StatusBar as StatusBarReact,
 } from "react-native";
-import AppButton from "./app/components/AppButton";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
+
+import ListingsScreen from "./app/screens/ListingsScreen";
 
 export default function App() {
-  const { landscape } = useDeviceOrientation();
   const handlePress = () => console.log("On btn press");
-  return <WelcomeScreen />;
-
-  // (
-  //   <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-  //     <AppButton title="Login" onPress={() => console.log("tapped")} />
-  //   </View>
-  // );
+  return <ListingsScreen />;
 }
 
 const styles = StyleSheet.create({
