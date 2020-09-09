@@ -8,8 +8,8 @@ import {
   TextInput,
 } from "react-native";
 
-import ListingsScreen from "./app/screens/ListingsScreen";
 import Screen from "./app/components/Screen";
+import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
   const handlePress = () => console.log("On btn press");
@@ -17,13 +17,7 @@ export default function App() {
   console.log(firstName);
   return (
     <Screen>
-      <TextInput
-        clearButtonMode="always" ///only iOS
-        // secureTextEntry
-        onChangeText={(text) => setFirstName(text)}
-        placeholder="First Name"
-        style={{ borderBottomColor: "#ccc", borderBottomWidth: 1 }}
-      />
+      <AppTextInput placeholder="Username" />
     </Screen>
   );
 }
