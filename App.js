@@ -18,6 +18,8 @@ export default function App() {
   return (
     <Screen>
       <TextInput
+        clearButtonMode="always" ///only iOS
+        // secureTextEntry
         onChangeText={(text) => setFirstName(text)}
         placeholder="First Name"
         style={{ borderBottomColor: "#ccc", borderBottomWidth: 1 }}
