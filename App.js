@@ -17,7 +17,7 @@ export default function App() {
   console.log(firstName);
   return (
     <Screen>
-      <AppTextInput placeholder="Username" />
+      <AppTextInput placeholder="Username" icon="email" />
     </Screen>
   );
 }
