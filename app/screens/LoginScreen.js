@@ -30,7 +30,7 @@ export default function LoginScreen() {
         icon="lock"
         placeholder="Password"
         secureTextEntry
-        textContentType="password" //iOS o
+        textContentType="password" //iOS only
       />
       <AppButton
         title="Login"
