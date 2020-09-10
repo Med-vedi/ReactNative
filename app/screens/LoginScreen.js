@@ -7,6 +7,7 @@ import AppButton from "../components/AppButton";
 import AppTextInput from "../components/AppTextInput";
 import ErrorMessage from "../components/ErrorMessage";
 import Screen from "../components/Screen";
+import AppFormField from "../components/AppFormField";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
@@ -24,20 +25,26 @@ export default function LoginScreen() {
       >
         {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
           <>
-            <AppTextInput
+            <AppFormField
               autoCapitalize="none"
               autoCorrect={false}
-              keyboardType="email-address"
-              onChangeText={handleChange("email")}
-              onBlur={() => setFieldTouched("email")}
               icon="email"
+              keyboardType="email-address"
+              name="email"
               placeholder="email"
               textContentType="emailAddress" //iOS only
             />
-            {/* {touched.email && <ErrorMessage error={errors.email} />} */}
-            <ErrorMessage error={errors.email} visible={touched.email} />
+            <AppFormField
+              autoCapitalize="none"
+              autoCorrect={false}
+              icon="lock"
+              name="password"
+              placeholder="Password"
+              secureTextEntry
+              textContentType="password" //iOS only
+            />
 
-            <AppTextInput
+            {/* <AppTextInput
               autoCapitalize="none"
               autoCorrect={false}
               keyboardType="email-address"
@@ -48,7 +55,7 @@ export default function LoginScreen() {
               secureTextEntry
               textContentType="password" //iOS only
             />
-            <ErrorMessage error={errors.password} visible={touched.password} />
+            <ErrorMessage error={errors.password} visible={touched.password} /> */}
             <AppButton title="Login" onPress={handleSubmit} />
           </>
         )}
