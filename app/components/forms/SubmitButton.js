@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import AppButton from "./AppButton";
+import AppButton from "../AppButton";
 import { useFormikContext } from "formik";
 
 export default function SubmitButton({ title }) {
