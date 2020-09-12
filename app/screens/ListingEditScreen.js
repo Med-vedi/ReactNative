@@ -39,23 +39,28 @@ export default function ListingEditScreen() {
         }}
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
-      ></AppForm>
-      <AppFormField maxLength={255} name="title" placeholder="Title" />
-      <AppFormField
-        keyboardType="numeric"
-        maxLength={8}
-        name="price"
-        placeholder="Price"
-      />
-      <AppFormField items={categories} name="category" placeholder="Category" />
-      <AppFormField
-        maxLength={255}
-        multiline
-        name="description"
-        numberOfLines={3}
-        placeholder="Description"
-      />
-      <SubmitButton title="Post" />
+      >
+        <AppFormField maxLength={255} name="title" placeholder="Title" />
+        <AppFormField
+          keyboardType="numeric"
+          maxLength={8}
+          name="price"
+          placeholder="Price"
+        />
+        <AppFormField
+          items={categories}
+          name="category"
+          placeholder="Category"
+        />
+        <AppFormField
+          maxLength={255}
+          multiline
+          name="description"
+          numberOfLines={3}
+          placeholder="Description"
+        />
+        <SubmitButton title="Post" />
+      </AppForm>
     </Screen>
   );
 }
