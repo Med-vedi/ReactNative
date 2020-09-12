@@ -1,9 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import * as Yup from "yup";
 
 import Screen from "../components/Screen";
-import { AppForm, AppFormField, SubmitButton } from "../components/forms";
+import {
+  AppForm,
+  AppFormField,
+  SubmitButton,
+  AppFormPicker,
+} from "../components/forms";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -47,7 +52,7 @@ export default function ListingEditScreen() {
           name="price"
           placeholder="Price"
         />
-        <AppFormField
+        <AppFormPicker
           items={categories}
           name="category"
           placeholder="Category"

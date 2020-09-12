@@ -15,7 +15,11 @@ export default function AppTextInput({ icon, ...props }) {
           style={styles.icon}
         />
       )}
-      <TextInput {...props} style={defaultStyles.text} />
+      <TextInput
+        placeholderTextColor={defaultStyles.colors.medium}
+        {...props}
+        style={defaultStyles.text}
+      />
     </View>
   );
 }
